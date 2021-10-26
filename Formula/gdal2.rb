@@ -3,7 +3,7 @@ class Gdal2 < Formula
   homepage "https://www.gdal.org/"
   url "https://download.osgeo.org/gdal/2.4.4/gdal-2.4.4.tar.xz"
   sha256 "a383bd3cf555d6e1169666b01b5b3025b2722ed39e834f1b65090f604405dcd8"
-  revision 9
+  revision 10
 
   bottle do
     sha256 catalina:    "27048486f535fa7951e8658255f3468afc5756116efb8ad4b1a1a84f2ca507fa"
@@ -53,6 +53,10 @@ class Gdal2 < Formula
   patch :p2 do
     url "https://github.com/OSGeo/gdal/commit/d587c2b0.diff?full_index=1"
     sha256 "9a6f473751e4e940f499b09fa0113a69c9977ef13f9a619f654142d4388ae568"
+  end
+  patch :p2 do
+    url "https://github.com/OSGeo/gdal/commit/9c09870.diff?full_index=1"
+    sha256 "5f94a27802cd3c2943ba2c50aa8f8beeb5d76ef7098518f4279931deb5618a69"
   end
 
   def install
