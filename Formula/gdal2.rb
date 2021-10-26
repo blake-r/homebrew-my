@@ -23,7 +23,6 @@ class Gdal2 < Formula
   depends_on "geos"
   depends_on "giflib"
   depends_on "hdf5"
-  depends_on "jasper"
   depends_on "jpeg"
   depends_on "json-c"
   depends_on "libdap"
@@ -35,6 +34,7 @@ class Gdal2 < Formula
   depends_on "libxml2"
   depends_on "netcdf"
   depends_on "numpy"
+  depends_on "openjpeg"
   depends_on "pcre"
   depends_on "poppler"
   depends_on "proj"
@@ -92,7 +92,7 @@ class Gdal2 < Formula
       "--with-cfitsio=#{Formula["cfitsio"].opt_prefix}",
       "--with-hdf5=#{Formula["hdf5"].opt_prefix}",
       "--with-netcdf=#{Formula["netcdf"].opt_prefix}",
-      "--with-jasper=#{Formula["jasper"].opt_prefix}",
+      "--with-openjpeg",
       "--with-xerces=#{Formula["xerces-c"].opt_prefix}",
       "--with-odbc=#{Formula["unixodbc"].opt_prefix}",
       "--with-dods-root=#{Formula["libdap"].opt_prefix}",
@@ -104,6 +104,7 @@ class Gdal2 < Formula
       "--with-armadillo=no",
       "--with-qhull=no",
       "--without-grass",
+      "--without-jasper",
       "--without-jpeg12",
       "--without-libgrass",
       "--without-mysql",
@@ -117,7 +118,6 @@ class Gdal2 < Formula
       "--without-ogdi",
       "--without-fme",
       "--without-hdf4",
-      "--without-openjpeg",
       "--without-fgdb",
       "--without-ecw",
       "--without-kakadu",
